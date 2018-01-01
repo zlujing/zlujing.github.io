@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Lorem Ipsum"
+title: "zlujing's blog"
 tags: lalala tag2 tag3 tag4
 ---
 
