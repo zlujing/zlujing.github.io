@@ -2,15 +2,24 @@
 layout: default
 ---
 
-{% include header.html %}
+{% include site-header.html %}
 
-<div class="content post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-date">
-    <time>{{ page.date | date_to_string }}</time>
-  </div>
-  {{ content }}
-</div>
-{% if site.disqus_shortname %}
-  {% include disqus_comments.html %}
-{% endif %}
+<main class="main  container">
+
+	<article class="article  article--post  content  typeset">
+
+    <h1>{{ page.title }}</h1>
+		{% include post-meta.html %}
+    {{ content }}
+
+		{% include nav-share.html %}
+
+		{% include post-comments.html %}
+
+  </article>
+
+	{% if page.aside == true %}{% include site-aside.html %}{% endif %}
+
+</main>
+
+{% include site-footer.html %}

@@ -1,9 +1,7 @@
-_site
-.coffeehintrc
-.jshintrc
-img/Thumbs.db
-.DS_Store
-._.DS_Store
-node_modules
-.sass-cache
-.ruby-version
+_site/
+.sass-cache/
+.jekyll-metadata
+alembic-jekyll-theme-*.gem
+Gemfile.lock
+**/Gemfile.lock
+
