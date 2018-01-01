@@ -1,49 +1,44 @@
 <!DOCTYPE html>
-<html{% if page.lang %}{% assign pgs = site.data.lang[page.lang] %} lang="{{ pgs.code }}"{% endif %}>
-<!--include head-->
+<html lang="en">
 {% include head.html %}
-  <body>
-	<!--include baidu push-->
-	<script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-	<!--include 360 push-->
-    <script>
-    (function(){
-      var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?46c5b22d50e91c655840fa7e08751929":"https://jspassport.ssl.qhimg.com/11.0.1.js?46c5b22d50e91c655840fa7e08751929";
-      document.write('<script src="' + src + '" id="sozz"><\/script>');
-    })();
-    </script>
-    <!--include masthead-->
-    {% include masthead.html %}
-    <div class="container">
-      <!--include header-->
-      {% include header.html %}
-      <div class="row">
-        <div class="col-sm-8 blog-main">
-          <!--include post -->
-          {{ content }}
-        </div><!-- /.blog-main -->
-        <!--include category-->
-        {% include category.html %}
-		<!--include friendlinks-->
-		{% include friendlinks.html %}
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-	<!--include search-->
-	{% include search.html %}
-    <!--include foot-->
-    {% include foot.html %}
-  </body>
+
+<body class="preload">
+    <div class="top"></div>
+    <div class="profile" style="background-image: url({{ site.background }});">
+        <img src="http://www.gravatar.com/avatar/{{ site.gravatar_hash }}?s=140" class="img-circle" />
+        <h3>{{ site.name }}</h3>
+        <p>{{ site.description }}</p>
+        <ul class="social">
+            {% if site.github %}
+            <a type="button" href="http://github.com/{{ site.github }}">
+                <i class="fa fa-github"></i>
+            </a>
+            {% endif %} {% if site.twitter %}
+            <a type="button" href="http://twitter.com/{{ site.twitter }}">
+                <i class="fa fa-twitter"></i>
+            </a>
+            {% endif %} {% if site.linkedin %}
+            <a type="button" href="http://linkedin.com/in/{{ site.linkedin }}">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            {% endif %} {% if site.pinterest %}
+            <a type="button" href="http://pinterest.com/{{ site.pinterest }}">
+                <i class="fa fa-pinterest"></i>
+            </a>
+            {% endif %} {% if site.facebook %}
+            <a type="button" href="http://facebook.com/{{ site.facebook }}">
+                <i class="fa fa-facebook"></i>
+            </a>
+            {% endif %}
+        </ul>
+    </div>
+    <div class="posts">
+        {{ content }}
+    </div>
+</body>
+<script type="text/javascript">
+    window.onload = function(){
+        document.getElementsByTagName("BODY")[0].classList.remove("preload");
+    }
+</script>
 </html>
