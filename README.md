@@ -43,19 +43,7 @@
 - Has 9 of the most popular networks as performant sharing buttons
 - Has documentation
 
-## Examples
 
-Here are a few examples of Alembic out in the wild being used in a variety of ways:
-
-- [bitpodcast.com](https://bitpodcast.com/)
-- [joelcagedesign.com](https://joelcagedesign.com/)
-- [bawejakunal.github.io](https://bawejakunal.github.io/)
-- [case2111.github.io](http://case2111.github.io/)
-- [www.10people.co.uk](http://www.10people.co.uk/)
-- [hrkeni.me](http://hrkeni.me/)
-- [venuthatikonda.github.io](https://venuthatikonda.github.io/)
-- [ccs17.bsc.es](https://ccs17.bsc.es/)
-- [karateca.org](http://www.karateca.org/)
 
 ## Installation
 
